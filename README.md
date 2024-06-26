@@ -6,7 +6,7 @@ This repository contains the code used in the research article titled "An Approa
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/caiodsfelipe/brain_tumor_cnn.git
+    git clone https://github.com/caiodsfelipe/brain-tumor-cnn.git
     cd brain_tumor_cnn
     ```
 
