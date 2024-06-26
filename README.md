@@ -38,6 +38,4 @@ This repository contains the code used in the research article titled "An Approa
     unzip data/validation_dataset/brain-tumor-classification-mri.zip -d data/validation_dataset
     ```
 
-6. Thats it!
-
-Now you can use the **notebooks/brain_tumor_cnn** notebook to run the code
+Thats it, now you can use the **notebooks/brain_tumor_cnn** notebook to run the code!
