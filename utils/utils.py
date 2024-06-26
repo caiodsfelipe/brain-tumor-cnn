@@ -1,4 +1,4 @@
-from sklearn.utils import shuffle, class_weight
+from sklearn.utils import class_weight
 import numpy as np
 import cv2
 import tensorflow as tf
