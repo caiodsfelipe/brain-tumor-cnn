@@ -1,0 +1,160 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+test-results/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# Pylint
+pylint.d/
+
+# Mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Environments
+.env
+.env.*
+.venv
+.venv.*
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea/
+.idea/*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Thumbnails
+Thumbs.db
+*.DS_Store
+
+# Other configuration files
+*.config
+
+# Local directories
+local/
+*.local
+
+# Logs
+logs/
+*.log
+
+# Data files
+*.csv
+*.h5
+*.db
+*.sql
+*.pickle
+*.dcm
+
+# Generated files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tif
+*.tiff
+*.svg
+
+# TensorBoard
+**/logs
+**/events.out.tfevents.*
+
+# Checkpoints
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+
+# Models
+*.h5
+*.pb
+*.tflite
+*.pkl
+*.joblib
+
+# Config files
+*.yaml
+*.yml
+*.ini
+*.cfg
+
+# Dataset
+datasets/
+*.zip
+*.tar.gz
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
