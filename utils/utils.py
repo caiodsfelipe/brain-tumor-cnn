@@ -4,13 +4,17 @@ import cv2
 import tensorflow as tf
 
 def calculate_class_weights(Y_train):
+    # Compute balanced class weights
     class_weights = class_weight.compute_class_weight('balanced', classes=np.unique(Y_train), y=Y_train)
+    # Return class weights as a dictionary with class indices as keys
     return dict(enumerate(class_weights))
 
 def convert_labels_to_indices(training_labels, test_labels):
+    # Convert string labels to numerical indices for training set
     unique_labels, training_labels_indices = np.unique(training_labels, return_inverse=True)
     training_labels = training_labels_indices
 
+    # Convert string labels to numerical indices for test set
     unique_labels, test_labels_indices = np.unique(test_labels, return_inverse=True)
     test_labels = test_labels_indices
 

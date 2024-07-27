@@ -5,16 +5,38 @@ from sklearn.model_selection import train_test_split
 from sklearn.utils import shuffle
 
 def get_training_callbacks():
-    early_stopping = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=18)
-    reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(monitor='loss', factor=0.2, patience=5)
-    model_checkpoint = tf.keras.callbacks.ModelCheckpoint(
-        filepath='../weights/weights.keras',
-        verbose=1,
-        monitor='val_accuracy',
-        mode='max',
-        save_best_only=True
+    """
+    Creates and returns a list of TensorFlow Keras callbacks for training a model.
+    
+    Returns:
+        list: A list containing three TensorFlow Keras callbacks:
+            - EarlyStopping: Stops training when a monitored metric has stopped improving.
+            - ReduceLROnPlateau: Reduces learning rate when a metric has stopped improving.
+            - ModelCheckpoint: Saves the model after every epoch with the best validation accuracy.
+    """
+    # Callback to stop training early if the validation loss does not improve for a certain number of epochs
+    early_stopping = tf.keras.callbacks.EarlyStopping(
+        monitor='val_loss',  # Metric to monitor
+        patience=18          # Number of epochs with no improvement after which training will be stopped
     )
-    return [early_stopping, reduce_lr, model_checkpoint]
+    
+    # Callback to reduce learning rate when the training loss plateaus
+    reduce_lr = tf.keras.callbacks.ReduceLROnPlateau(
+        monitor='loss',      # Metric to monitor
+        factor=0.2,          # Factor by which the learning rate will be reduced
+        patience=5           # Number of epochs with no improvement after which learning rate will be reduced
+    )
+    
+    # Callback to save the model with the best validation accuracy
+    model_checkpoint = tf.keras.callbacks.ModelCheckpoint(
+        filepath='../weights/weights.keras',  # Path where the model weights will be saved
+        verbose=1,                            # Verbosity mode, 1 for progress messages
+        monitor='val_accuracy',               # Metric to monitor for saving the model
+        mode='max',                           # Mode for the metric, 'max' to save the best model with highest accuracy
+        save_best_only=True                    # Only save the model if the monitored metric has improved
+    )
+    
+    return [early_stopping, reduce_lr, model_checkpoint]  # Return the list of callbacks
 
 def fit_and_evaluate(training_images, validation_images, training_labels, validation_labels, class_weights, callbacks):
     """
