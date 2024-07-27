@@ -142,6 +142,7 @@ checkpoints/
 *.tflite
 *.pkl
 *.joblib
+weights/
 
 # Config files
 *.yaml
